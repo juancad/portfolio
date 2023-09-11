@@ -22,7 +22,7 @@ export default function Header() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <Link color="foreground" href="/"><UserIcon /> &nbsp; Portafolio de Juan C.</Link>
+          <Link color="foreground" href="/"><UserIcon /> &nbsp; <span className="hidden sm:block">Portafolio de Juan C.</span></Link>
         </NavbarBrand>
       </NavbarContent>
 
