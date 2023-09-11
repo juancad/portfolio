@@ -1,4 +1,4 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button } from "@nextui-org/react";
 import { useState } from "react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { UserIcon } from "./Icons";
@@ -49,6 +49,11 @@ export default function Header() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          <Button radius="full" size="sm" className="bg-gradient-to-tr from-orange-600 to-pink-600 text-white shadow-lg">
+            Descargar CV
+          </Button>
+        </NavbarItem>
         <NavbarItem>
           <ThemeSwitcher></ThemeSwitcher>
         </NavbarItem>

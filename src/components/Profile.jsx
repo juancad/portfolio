@@ -1,4 +1,3 @@
-import { Avatar } from "@nextui-org/react";
 import $ from 'jquery';
 
 export default function Profile() {
@@ -6,15 +5,15 @@ export default function Profile() {
     <>
       <section>
         <header className="inline-flex gap-4 items-center">
-          <Avatar src="profile.jpg" className="w-36 h-36" />
-          <h1 className="font-extrabold text-2xl sm:text-5xl text-left">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-700 to-pink-700">Juan Carlos</span> Alcalde
+          <img src="profile.jpg" className="w-36 h-36 aspect-square rounded-full" />
+          <h1 className="font-extrabold text-4xl sm:text-5xl text-left">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">Juan Carlos</span> Alcalde
           </h1>
         </header>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <h2 className="text-left font-medium">
-          <span className="feature-text text-xl sm:text-3xl mt-4"></span><span className="input-cursor h-5 sm:h-7"></span>
+          <span className="write-text text-2xl sm:text-3xl mt-4 align-middle"></span><span className="input-cursor h-8 sm:h-9 align-middle"></span>
         </h2>
       </section>
     </>
@@ -28,7 +27,7 @@ const carouselText = [
 ];
 
 $(document).ready(async function () {
-  carousel(carouselText, ".feature-text")
+  carousel(carouselText, ".write-text")
 });
 
 async function typeSentence(sentence, eleRef, delay = 100) {

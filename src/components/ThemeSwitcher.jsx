@@ -27,10 +27,10 @@ export function ThemeSwitcher() {
   };
 
   return (
-    <Switch
+    <Switch 
       defaultSelected={selectedTheme === "dark"}
-      size="lg"
-      color="secondary"
+      size="md"
+      color="warning"
       thumbIcon={({ isSelected, className }) =>
         isSelected ? <SunIcon className={className} /> : <MoonIcon className={className} />
       }

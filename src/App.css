@@ -20,8 +20,6 @@
   display: inline-block;
   width: 2px;
   background-color: currentColor;
-  margin-left: 3px;
+  margin-left: 4px;
   animation: blink .6s linear infinite alternate;
-  position: absolute;
-  margin-top: 5px;
 }
