@@ -27,3 +27,11 @@
 h3 {
   text-wrap: balance;
 }
+
+.card {
+  transition: .35s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}

@@ -9,7 +9,7 @@ export default function Header() {
   const menuItems = [
     {
       title: 'Inicio',
-      link: '#inicio',
+      link: '#',
     }, {
       title: 'Proyectos',
       link: '#proyectos',
@@ -33,7 +33,7 @@ export default function Header() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <Link color="foreground" href="/"><UserIcon /> &nbsp; <span className="hidden sm:block">Portafolio de Juan C.</span></Link>
+          <Link color="foreground" href="#"><UserIcon /> &nbsp; <span className="hidden sm:block">Portafolio de Juan C.</span></Link>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">

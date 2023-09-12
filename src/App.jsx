@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
+import Technologies from "./components/Technologies";
 
 import './App.css'
 
@@ -13,7 +14,8 @@ export default function App() {
         <Profile></Profile>
         <br /><br />
         <Projects></Projects>
-        <br />
+        <br /><br />
+        <Technologies></Technologies>
       </main>
     </>
   );

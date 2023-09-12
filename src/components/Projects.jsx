@@ -4,11 +4,13 @@ import { TechnologieIcon, GitHubIcon } from "./Icons";
 export default function Projects() {
   return (
     <section id="proyectos">
-      <h2 className="font-extrabold text-xl sm:text-3xl text-left"><span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">Proyectos</span></h2>
+      <header>
+        <h2 className="font-extrabold text-xl sm:text-3xl text-left"><span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">Proyectos</span></h2>
+      </header>
       <br />
       <div className="max-w-[900px] inline-flex gap-5">
         {projects.map((project, index) => (
-          <Card key={index} className="col-span-12 sm:col-span-4 w-[300px] sm:w-[350px]">
+          <Card key={index} className="card col-span-12 sm:col-span-4 w-[300px] sm:w-[350px]">
             <CardHeader className="flex p-0">
               <Image
                 alt="meta-aplicación para el incrustado de modelos de IA"
@@ -23,12 +25,13 @@ export default function Projects() {
 
               <p>
                 {project.desc}
-                <br />
-                <br />
+              </p>
+              <br />
+              <div className="inline-block">
                 {project.tecnologies.map((technologie, index2) => (
                   <Technologie key={index2}>{technologie}</Technologie>
                 ))}
-              </p>
+              </div>
 
             </CardBody>
             <Divider />
