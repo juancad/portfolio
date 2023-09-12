@@ -23,3 +23,7 @@
   margin-left: 4px;
   animation: blink .6s linear infinite alternate;
 }
+
+h3 {
+  text-wrap: balance;
+}

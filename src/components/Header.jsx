@@ -1,17 +1,28 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button } from "@nextui-org/react";
 import { useState } from "react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { UserIcon } from "./Icons";
+import { GitHubIcon, UserIcon, LinkedInIcon } from "./Icons";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    "Inicio",
-    "Proyectos",
-    "Tecnologías",
-    "Educación",
-    "Contacto"
+    {
+      title: 'Inicio',
+      link: '#inicio',
+    }, {
+      title: 'Proyectos',
+      link: '#proyectos',
+    }, {
+      title: 'Tecnologías',
+      link: '#tecnologías',
+    }, {
+      title: 'Educación',
+      link: '#educación',
+    }, {
+      title: 'Contacto',
+      link: '#contacto',
+    }
   ];
 
   return (
@@ -25,37 +36,30 @@ export default function Header() {
           <Link color="foreground" href="/"><UserIcon /> &nbsp; <span className="hidden sm:block">Portafolio de Juan C.</span></Link>
         </NavbarBrand>
       </NavbarContent>
-
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Proyectos
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Tecnologías
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Educación
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Contacto
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item, index) => (
+          <NavbarItem key={`${item}-${index}`}>
+            <Link
+              color="foreground"
+              href={item.link}
+            >
+              {item.title}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          <Link className='group relative max-w-fit inline-flex items-center justify-start touch-none tap-highlight-transparent p-1 w-8 h-8 transition-opacity opacity-90 hover:opacity-70 cursor-pointer ' href="https://www.linkedin.com/in/juancarlosad/" color="foreground" target="_blank"><LinkedInIcon /></Link>
+          <Link className='group relative max-w-fit inline-flex items-center justify-start touch-none tap-highlight-transparent p-1 w-8 h-8 transition-opacity  opacity-90 hover:opacity-70 cursor-pointer ' href="https://github.com/juancad" color="foreground" target="_blank"><GitHubIcon /></Link>
+        </NavbarItem>
         <NavbarItem>
           <Button radius="full" size="sm" className="bg-gradient-to-tr from-orange-600 to-pink-600 text-white shadow-lg">
             Descargar CV
           </Button>
         </NavbarItem>
         <NavbarItem>
-          <ThemeSwitcher></ThemeSwitcher>
+          <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
@@ -64,10 +68,10 @@ export default function Header() {
             <Link
               color="foreground"
               className="w-full"
-              href="#"
+              href={item.link}
               size="lg"
             >
-              {item}
+              {item.title}
             </Link>
           </NavbarMenuItem>
         ))}

@@ -6,9 +6,12 @@ export default function Profile() {
       <section>
         <header className="inline-flex gap-4 items-center">
           <img src="profile.jpg" className="w-36 h-36 aspect-square rounded-full" />
-          <h1 className="font-extrabold text-3xl sm:text-5xl text-left">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">Juan Carlos</span> Alcalde
-          </h1>
+          <div>
+            <span className="font-extrabold text-base sm:text-lg text-left absolute" style={{ marginTop: '-28px' }}>Hola👋, soy</span>
+            <h1 className="font-extrabold text-3xl sm:text-5xl text-left">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">Juan Carlos</span> Alcalde
+            </h1>
+          </div>
         </header>
         <br />
         <br />
@@ -19,7 +22,6 @@ export default function Profile() {
     </>
   );
 }
-
 
 const carouselText = [
   { text: "Ingeniero Informático" },
