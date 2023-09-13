@@ -16,6 +16,18 @@
   }
 }
 
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
 .input-cursor {
   display: inline-block;
   width: 2px;
@@ -34,4 +46,35 @@ h3 {
 
 .card:hover {
   transform: scale(1.03);
+}
+
+p {
+  text-wrap: balance;
+}
+#perfil {
+  min-height: calc(100vh - 4rem);
+}
+
+#proyectos {
+  min-height: 100vh;
+}
+
+#perfil,
+#proyectos {
+  padding-top: 4rem;
+  position: relative;
+}
+
+.container-emoji {
+  animation: bounce 2s infinite;
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-height: 600px) {
+  .container-emoji {
+    display: none;
+  }
 }

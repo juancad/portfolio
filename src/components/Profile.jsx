@@ -3,7 +3,7 @@ import $ from 'jquery';
 export default function Profile() {
   return (
     <>
-      <section>
+      <section id="perfil">
         <header className="inline-flex gap-4 items-center">
           <img src="profile.jpg" className="w-36 h-36 aspect-square rounded-full" />
           <div>
@@ -18,6 +18,16 @@ export default function Profile() {
         <h2 className="text-left font-medium">
           <span className="write-text text-xl sm:text-3xl mt-4 align-middle"></span><span className="input-cursor h-6 sm:h-9 align-middle"></span>
         </h2>
+        <br />
+        <p>
+          📍 Extremadura, España
+        </p>
+        <br />
+        <p>
+          Recién titulado en el grado en <span className="text-pink-600 font-bold">Ingeniería Informática</span> en Tecnologías de la Información, con +1 año de experiencia como <span className="text-pink-600 font-bold">técnico de sistemas</span>. Apasionado de las informática y las tecnologías, en especial del <span className="text-pink-600 font-bold">desarrollo Frontend</span>. Con capacidad y ganas de aprender.</p>
+        <div className="container-emoji">
+          <span>👇</span>
+        </div>
       </section>
     </>
   );

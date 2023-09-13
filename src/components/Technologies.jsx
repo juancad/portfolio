@@ -3,7 +3,7 @@ import { TechnologieIcon } from "./Icons";
 
 export default function Technologies() {
     return (
-        <section id="tecnologías">
+        <section id="tecnologias">
             <header>
                 <h2 className="font-extrabold text-xl sm:text-3xl text-left"><span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">Tecnologías</span></h2>
             </header>

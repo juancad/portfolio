@@ -15,10 +15,10 @@ export default function Header() {
       link: '#proyectos',
     }, {
       title: 'Tecnologías',
-      link: '#tecnologías',
+      link: '#tecnologias',
     }, {
       title: 'Educación',
-      link: '#educación',
+      link: '#educacion',
     }, {
       title: 'Contacto',
       link: '#contacto',
@@ -26,7 +26,10 @@ export default function Header() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -62,10 +65,11 @@ export default function Header() {
           <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu motionProps>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
+               onClick={() => setIsMenuOpen(false)}
               color="foreground"
               className="w-full"
               href={item.link}
