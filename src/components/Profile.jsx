@@ -25,9 +25,6 @@ export default function Profile() {
         <br />
         <p>
           Recién titulado en el grado en <span className="text-pink-600 font-bold">Ingeniería Informática</span> en Tecnologías de la Información, con +1 año de experiencia como <span className="text-pink-600 font-bold">técnico de sistemas</span>. Apasionado de las informática y las tecnologías, en especial del <span className="text-pink-600 font-bold">desarrollo Frontend</span>. Con capacidad y ganas de aprender.</p>
-        <div className="container-emoji">
-          <span>👇</span>
-        </div>
       </section>
     </>
   );
