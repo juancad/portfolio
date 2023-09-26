@@ -17,9 +17,6 @@ export default function Header() {
       title: 'Tecnologías',
       link: '#tecnologias',
     }, {
-      title: 'Educación',
-      link: '#educacion',
-    }, {
       title: 'Contacto',
       link: '#contacto',
     }
@@ -69,7 +66,7 @@ export default function Header() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-               onClick={() => setIsMenuOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
               color="foreground"
               className="w-full"
               href={item.link}

@@ -40,6 +40,7 @@ h3 {
   text-wrap: balance;
 }
 
+/*
 .card {
   transition: .35s;
 }
@@ -47,11 +48,44 @@ h3 {
 .card:hover {
   transform: scale(1.03);
 }
+*/
 
 p {
   text-wrap: balance;
 }
 
-#proyectos, #tecnologias {
+#proyectos,
+#tecnologias {
   padding-top: 4rem;
+}
+
+.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+  padding: 0px 50px 45px 50px;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -10px;
+  margin-bottom: -20px;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+  }
+}
+
+section#perfil {
+  position: relative;
+  min-height: calc(100vh - 8rem);
+}
+
+section#proyectos {
+  min-height: calc(100vh - 4rem);
 }

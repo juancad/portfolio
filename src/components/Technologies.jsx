@@ -7,7 +7,7 @@ export default function Technologies() {
             <header>
                 <h2 className="font-extrabold text-xl sm:text-3xl text-left"><span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">Tecnologías</span></h2>
             </header>
-            <br />
+            <br /><br />
             <ShowTechnologiesList list={frameworks}>Frameworks</ShowTechnologiesList>
             <ShowTechnologiesList list={lenguajes}>Lenguajes</ShowTechnologiesList>
             <ShowTechnologiesList list={bases_datos}>Bases de datos</ShowTechnologiesList>

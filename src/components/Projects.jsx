@@ -1,5 +1,11 @@
 import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Chip } from "@nextui-org/react";
 import { TechnologieIcon, GitHubIcon } from "./Icons";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css';
 
 export default function Projects() {
   return (
@@ -7,52 +13,75 @@ export default function Projects() {
       <header>
         <h2 className="font-extrabold text-xl sm:text-3xl text-left"><span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">Proyectos</span></h2>
       </header>
-      <br />
-      <div className="max-w-[900px] inline-flex gap-5">
+      <br /><br />
+      <Swiper
+        modules={[Pagination, Navigation]}
+        slidesPerView={1}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        breakpoints={{
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          }
+        }}
+      >
         {projects.map((project, index) => (
-          <Card key={index} className="card col-span-12 sm:col-span-4 w-[300px] sm:w-[350px]">
-            <CardHeader className="flex p-0">
-              <Image
-                alt="meta-aplicación para el incrustado de modelos de IA"
-                width="100%"
-                className="rounded-t-lg"
-                src={project.image}
-                radius="none"
-              />
-            </CardHeader>
-            <CardBody>
-              <h3 className="mb-2.5 font-bold text-pink-600">{project.title}</h3>
+          <SwiperSlide key={index}>
+            <Card className="col-span-12 sm:col-span-4">
+              <CardHeader className="flex p-0">
+                <Image
+                  alt="meta-aplicación para el incrustado de modelos de IA"
+                  width="100%"
+                  className="rounded-t-lg"
+                  src={project.image}
+                  radius="none"
+                />
+              </CardHeader>
+              <CardBody>
+                <h3 className="mb-2.5 font-bold text-pink-600">{project.title}</h3>
 
-              <p>
-                {project.desc}
-              </p>
-              <br />
-              <div className="inline-block">
-                {project.tecnologies.map((technologie, index2) => (
-                  <Technologie key={index2}>{technologie}</Technologie>
-                ))}
-              </div>
+                <p>
+                  {project.desc}
+                </p>
+                <br />
+                <div className="inline-block">
+                  {project.tecnologies.map((technologie, index2) => (
+                    <Technologie key={index2}>{technologie}</Technologie>
+                  ))}
+                </div>
 
-            </CardBody>
-            <Divider />
-            <CardFooter className="gap-4">
-              <Link
-                isExternal
-                href={project.github}
-              >
-                Código fuente&nbsp;
-                <GitHubIcon className="flex mx-1 text-current self-center" size={14} />
-              </Link>
-              <Link
-                isExternal
-                href={project.demo}
-                showAnchorIcon
-              >
-                Demo
-              </Link>
-            </CardFooter>
-          </Card>
+              </CardBody>
+              <Divider />
+              <CardFooter className="gap-4">
+                <Link
+                  isExternal
+                  href={project.github}
+                >
+                  Código fuente&nbsp;
+                  <GitHubIcon className="flex mx-1 text-current self-center" size={14} />
+                </Link>
+                <Link
+                  isExternal
+                  href={project.demo}
+                  showAnchorIcon
+                >
+                  Demo
+                </Link>
+              </CardFooter>
+            </Card>
+          </SwiperSlide>
         ))}
+      </Swiper>
+
+
+      <div className="max-w-[900px] inline-flex gap-5">
+
       </div>
     </section>
   );
